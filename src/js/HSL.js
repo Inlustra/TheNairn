@@ -12,9 +12,9 @@ HSL.prototype.toRGB = function () {
         this.hue /= 60;
         this.sat /= 100;
         this.lum /= 100;
-        i = Math.floor(this.hue);
-        f = this.hue - i;
-        p = this.lum * (1 - this.sat);
+        var i = Math.floor(this.hue);
+        var f = this.hue - i;
+        var p = this.lum * (1 - this.sat);
         q = this.lum * (1 - this.sat * f);
         t = this.lum * (1 - this.sat * (1 - f));
         switch (i) {
@@ -60,7 +60,7 @@ HSL.prototype.toHex = function () {
 };
 
 HSL.prototype.toString = function () {
-    return "hsl(" + this.hue + ", " + this.sat + "%, " + this.lum + "%)"
+    return 'hsl(' + this.hue + ', ' + this.sat + '%, ' + this.lum + '%)'
 };
 
 HSL.prototype.shift = function (amount) {
